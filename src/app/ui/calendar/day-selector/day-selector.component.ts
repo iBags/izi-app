@@ -76,6 +76,10 @@ export class DaySelectorComponent implements AfterViewInit {
   ]);
 
   onSelect(day: SelectableDay) {
+    if (day.isFull) {
+      return;
+    }
+
     this.days.update((currentDays) =>
       currentDays.map((currentDay) => ({
         ...currentDay,
