@@ -1,0 +1,20 @@
+<div class="grid grid-cols-2 gap-4">
+  @for (item of itemsToPaint(); track item.id) {
+    <button
+      class="transition rounded-md px-6 py-2.5 border leading-4 ease-in hover:border-blue-600 hover:text-blue-600 flex items-center justify-center"
+      [ngClass]="
+        !item.active
+          ? 'text-gray-500 border-gray-200'
+          : 'border-blue-600 text-blue-600'
+      "
+      (click)="onSelectItem(item)"
+    >
+      <izi-icon
+        class="transition-width ease-in-out mr-1"
+        [ngClass]="item.active ? 'w-auto opacity-100' : 'w-0 opacity-0'"
+        [size]="16"
+      ></izi-icon>
+      {{ item.label }}
+    </button>
+  }
+</div>

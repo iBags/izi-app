@@ -1,0 +1,33 @@
+<header class="mb-5 relative">
+  <div class="absolute w-full flex items-center justify-between">
+    <izi-icon icon="arrow_back"></izi-icon>
+    <span class="text-2xl text-gray-400">
+      {{ currentStep() }} of {{ steps() }}
+    </span>
+  </div>
+  <div class="grow text-center text-3xl font-semibold">
+    <h1>{{ title() }}</h1>
+  </div>
+</header>
+<div [ngClass]="" class="bg-gray-100 flex w-full rounded-xl h-4 relative">
+  <div class="absolute w-full flex justify-between">
+    @for (item of Array(steps()); track item) {
+      <div class="p-1.5 size-4">
+        <div class="w-full h-full bg-gray-400 rounded-2xl"></div>
+      </div>
+    }
+    <div class="p-0.5 size-4">
+      <div class="w-full h-full bg-white rounded-2xl"></div>
+    </div>
+  </div>
+  <div
+    [style]="{
+      width: 'calc(' + (this.currentStep() / this.steps()) * 100 + '% + 8px)',
+    }"
+    class="bg-blue-600 h-full rounded-xl flex justify-end z-1"
+  >
+    <div class="p-1 size-4">
+      <div class="w-full h-full bg-white rounded-2xl"></div>
+    </div>
+  </div>
+</div>

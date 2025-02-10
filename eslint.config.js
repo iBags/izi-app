@@ -34,7 +34,7 @@ module.exports = [
         'warn',
         {
           type: 'attribute',
-          prefix: 'app',
+          prefix: 'izi',
           style: 'camelCase',
         },
       ],
@@ -42,7 +42,7 @@ module.exports = [
         'warn',
         {
           type: 'element',
-          prefix: 'app',
+          prefix: 'izi',
           style: 'kebab-case',
         },
       ],
@@ -56,6 +56,12 @@ module.exports = [
         },
       ],
       '@angular-eslint/no-host-metadata-property': 'off',
+      '@angular-eslint/component-class-suffix': [
+        'warn',
+        {
+          suffixes: ['Component', 'View', 'Page', 'Main'],
+        },
+      ],
       '@angular-eslint/no-output-on-prefix': 'off',
       '@typescript-eslint/ban-types': 'off',
     },

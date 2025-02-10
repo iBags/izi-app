@@ -1,0 +1,16 @@
+<div class="overflow-hidden">
+  <izi-container>
+    <swiper-container id="selector-day" init="false">
+      @for (day of days(); track day.date) {
+        <swiper-slide>
+          <izi-day
+            [date]="day.date"
+            [active]="day.active"
+            [isFull]="day.isFull"
+            (click)="onSelect(day)"
+          ></izi-day>
+        </swiper-slide>
+      }
+    </swiper-container>
+  </izi-container>
+</div>

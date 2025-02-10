@@ -1,0 +1,72 @@
+<izi-container>
+  <div class="mb-7">
+    <izi-stepper
+      [currentStep]="1"
+      [steps]="4"
+      title="Form Step 1"
+    ></izi-stepper>
+  </div>
+</izi-container>
+<div class="mb-10">
+  <izi-day-selector></izi-day-selector>
+</div>
+<izi-container>
+  <div class="flex items-center mb-2">
+    <izi-icon [size]="30" icon="twilight"></izi-icon>
+    <h2>Morning</h2>
+  </div>
+  <izi-button-group
+    [items]="[
+      {
+        id: 'id1',
+        label: '9:00 AM',
+      },
+      {
+        id: 'id2',
+        label: '10:00 AM',
+      },
+    ]"
+  ></izi-button-group>
+  <div class="flex items-center mt-7 mb-2">
+    <izi-icon [size]="30" icon="sunny"></izi-icon>
+    <h2>Day</h2>
+  </div>
+  <izi-button-group
+    [items]="[
+      {
+        id: 'id1',
+        label: '13:00 PM',
+      },
+      {
+        id: 'id2',
+        label: '14:00 PM',
+      },
+      {
+        id: 'id3',
+        label: '15:00 PM',
+      },
+    ]"
+  ></izi-button-group>
+  <div class="flex items-center mt-7 mb-2">
+    <izi-icon [size]="30" icon="moon"></izi-icon>
+    <h2>Evening</h2>
+  </div>
+  <izi-button-group
+    [items]="[
+      {
+        id: 'id1',
+        label: 'btn1',
+      },
+      {
+        id: 'id2',
+        label: 'btn2',
+      },
+    ]"
+  ></izi-button-group>
+  <div></div>
+  <div class="w-full grid grid-cols-3 gap-4 mt-7 mb-6">
+    <izi-button [block]="true" theme="basic">Cancel</izi-button>
+    <izi-button [block]="true" theme="secondary">Previous</izi-button>
+    <izi-button [block]="true">Next</izi-button>
+  </div>
+</izi-container>
